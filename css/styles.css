@@ -78,8 +78,22 @@ header {
 .list-nav:focus {
     color: var(--accent-color);
 }
-.list-nav.current {
+.current {
+    position: relative;
     color: var(--accent-color);
+}
+.current::after {
+    content: '';
+
+    position: absolute;
+bottom: 0;
+
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    margin: -1px;
+    background-color: var(--accent-color);
 }
 
 
@@ -227,14 +241,44 @@ img {
     margin-top: 0;
     margin-bottom: 50px;
 }
-.image-container {
+.task-container {
     display: flex;
     gap: 30px;
     padding: 0;
     margin: 0;
 }
-.image {
+.task {
     list-style-type: none;
+}
+.task-thumb {
+    position: relative;
+}
+.task-meta {    
+    position: absolute;
+    bottom: 0;
+
+    background-color: rgba(47, 48, 58, 0.8);
+    display: flex;
+    width: 370px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.task-caption-text {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: var(--third-text-color);
+
+    margin: 0;
+    padding: 27px 15px;
 }
 
 /* Наша команда */
@@ -536,5 +580,35 @@ button {
 a {
     text-decoration: none;
 }
+.projects-thumb {
+    position: relative;
+}
+.projects-information {
+    position: absolute;
+    
+    background: rgba(33, 150, 243, 0.9); 
+display: flex;
+width: 370px;
+justify-content: center;
+    align-items: center;
+
+
+
+}
+.projects-information-text  {
+    
+
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 1.55;
+letter-spacing: 0.03em;
+
+color: var(--third-text-color);
+
+padding: 63px 24px;
+}
+
 
 /* Finish Portfolio page */
