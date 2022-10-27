@@ -7,6 +7,8 @@
     --black-color: #000000;
     --icons-color: #afb1b8;
     --features-color: #f5f4fa;
+    --modal-overlay: rgba(0, 0, 0, 0.2);
+    --modal-background: #FFFFFF;
 }
 .outline {
     outline: 1px solid red;
@@ -83,10 +85,10 @@ header {
     color: var(--accent-color);
 }
 .current::after {
-    content: '';
+    content: "";
 
     position: absolute;
-bottom: 0;
+    bottom: 0;
 
     display: block;
     width: 100%;
@@ -95,7 +97,6 @@ bottom: 0;
     margin: -1px;
     background-color: var(--accent-color);
 }
-
 
 .container-contacts {
     display: flex;
@@ -253,7 +254,7 @@ img {
 .task-thumb {
     position: relative;
 }
-.task-meta {    
+.task-meta {
     position: absolute;
     bottom: 0;
 
@@ -262,10 +263,7 @@ img {
     width: 370px;
     justify-content: center;
     align-items: center;
-    
 }
-
-
 .task-caption-text {
     font-family: "Roboto";
     font-style: normal;
@@ -547,6 +545,7 @@ button {
     list-style-type: none;
     width: calc((100% - 60px) / 3);
 }
+
 .projects-link {
     display: block;
 }
@@ -583,32 +582,77 @@ a {
 .projects-thumb {
     position: relative;
 }
+.projects:hover .projects-information,
+.projects:focus .projects-information {
+    opacity: 1;
+}
 .projects-information {
     position: absolute;
-    
-    background: rgba(33, 150, 243, 0.9); 
-display: flex;
-width: 370px;
-justify-content: center;
+    bottom: 0;
+    background-color: rgba(33, 150, 243, 0.9);
+    display: flex;
+    width: 370px;
+    justify-content: center;
     align-items: center;
-
-
-
-}
-.projects-information-text  {
-    
-
-    font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 1.55;
-letter-spacing: 0.03em;
-
-color: var(--third-text-color);
-
-padding: 63px 24px;
+    opacity: 0;
 }
 
+.projects-information-text {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+
+    color: var(--third-text-color);
+
+    padding: 63px 24px;
+    margin: 0;
+}
 
 /* Finish Portfolio page */
+
+/* modal */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--modal-overlay);
+}
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    min-width: 528px;
+    min-height: 581px;
+
+    background-color: var(--modal-background);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 4px;
+
+}
+.close-modal {
+    position: fixed;
+    top: 8px;
+    right: 8px;
+
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    justify-content: center;    
+    align-items: center;
+    padding: 0;
+}
+

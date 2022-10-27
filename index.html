@@ -71,7 +71,7 @@
             <!-- Герой -->
             <section class="hero">
                 <h1 class="title">Ефективні рішення для вашого бізнесу</h1>
-                <button type="button" class="button">Замовити послугу</button>
+                <button type="button" class="button" data-modal-open>Замовити послугу</button>
             </section>
             <!-- Особливості -->
             <section class="section">
@@ -160,48 +160,48 @@
                     <ul class="task-container">
                         <li class="task">
                             <div class="task-thumb">
-                            <img
-                                src="./img/box1.jpg"
-                                alt="людина пише код"
-                                width="370"
-                                height="294"
-                            />
-                            <div class="task-meta">
-                                <h3 class="task-caption-text">
-                                    ДЕСКТОПНІ ДОДАДКИ
-                                </h3>
+                                <img
+                                    src="./img/box1.jpg"
+                                    alt="людина пише код"
+                                    width="370"
+                                    height="294"
+                                />
+                                <div class="task-meta">
+                                    <h3 class="task-caption-text">
+                                        ДЕСКТОПНІ ДОДАДКИ
+                                    </h3>
+                                </div>
                             </div>
-                        </div>
                         </li>
                         <li class="task">
                             <div class="task-thumb">
-                            <img
-                                src="./img/box2.jpg"
-                                alt="людина створює додаток для телефона"
-                                width="370"
-                                height="294"
-                            />
-                            <div class="task-meta">
-                                <h3 class="task-caption-text">
-                                    МОБІЛЬНІ ДОДАДКИ
-                                </h3>
+                                <img
+                                    src="./img/box2.jpg"
+                                    alt="людина створює додаток для телефона"
+                                    width="370"
+                                    height="294"
+                                />
+                                <div class="task-meta">
+                                    <h3 class="task-caption-text">
+                                        МОБІЛЬНІ ДОДАДКИ
+                                    </h3>
+                                </div>
                             </div>
-                        </div>
                         </li>
                         <li class="task">
                             <div class="task-thumb">
-                            <img
-                                src="./img/box3.jpg"
-                                alt="селектор кольору"
-                                width="370"
-                                height="294"
-                            />
-                            <div class="task-meta">
-                                <h3 class="task-caption-text">
-                                    ДИЗАЙНЕРСЬКІ РІШЕННЯ
-                                </h3>
+                                <img
+                                    src="./img/box3.jpg"
+                                    alt="селектор кольору"
+                                    width="370"
+                                    height="294"
+                                />
+                                <div class="task-meta">
+                                    <h3 class="task-caption-text">
+                                        ДИЗАЙНЕРСЬКІ РІШЕННЯ
+                                    </h3>
+                                </div>
                             </div>
-                        </div>
                         </li>
                     </ul>
                 </div>
@@ -655,5 +655,19 @@
                 </div>
             </div>
         </footer>
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button class="close-modal" data-modal-close>
+                    <svg class="modal-svg" 
+                    width="18" 
+                    height="18">
+                        <use
+                            href="./img/icons.svg#icon-close-black-18dp-2-1"
+                        ></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <script src="./js/modal.js"></script>
     </body>
 </html>
