@@ -604,12 +604,15 @@ button {
 a {
     text-decoration: none;
 }
+
 .projects-thumb {
     position: relative;
+    overflow: hidden;
 }
 .projects:hover .projects-information,
 .projects:focus .projects-information {
     opacity: 1;
+    transform: translateY(0);
 }
 .projects-information {
     position: absolute;
@@ -620,6 +623,8 @@ a {
     justify-content: center;
     align-items: center;
     opacity: 0;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-information-text {
